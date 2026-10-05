@@ -1,0 +1,7 @@
+1. "Giải thích cho tôi kỹ thuật Guard Clauses (Early Return) trong lập trình là gì? Kỹ thuật này giúp giải quyết vấn đề if-else lồng nhau như thế nào?"
+
+2. "Tôi muốn tái cấu trúc đoạn code kiểm tra điều kiện vay. Việc sử dụng nhiều lệnh 'return' giữa chừng (Early Return) trong một hàm có vi phạm nguyên tắc thiết kế nào không? Phân tích ưu nhược điểm của nó so với việc dùng 1 biến 'result' duy nhất ở cuối hàm."
+
+3. "Tôi đã đảo ngược điều kiện user.age >= 18 thành user.age <= 18 để return sớm, nhưng dường như logic đang bị sai với người vừa tròn 18 tuổi. Hãy giải thích lỗi logic toán học của tôi nhưng đừng viết code hộ."
+
+4. "Đóng vai Tester QA. Code của tôi kiểm tra 5 điều kiện: isActive, age, income, creditScore, hasBadDebt. Hãy sinh cho tôi 1 mảng chứa 6 objects giả lập (Mock data) bao phủ tất cả các nhánh để tôi chạy vòng lặp test hệ thống của mình."
