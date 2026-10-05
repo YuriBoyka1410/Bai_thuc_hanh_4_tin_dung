@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EasyLoan - Loan Eligibility Checker</title>
+  </head>
+  <body>
+    <h2>Hệ thống thẩm định tín dụng - EasyLoan</h2>
+    <div id="output"></div>
+
+    <script>
+      function verifyLoanEligibility(user) {
+        if (!user.isActive) return "Từ chối: Tài khoản đang bị khóa";
+        if (user.age < 18) return "Từ chối: Khách hàng chưa đủ tuổi ";
+        if (user.income < 10000000)
+          return "Từ chối: Thu nhập không đủ điều kiện";
+        if (user.creditScore <= 600) return "Từ chối: Điểm tín dụng quá thấp ";
+        if (user.hasBadDebt) return "Từ chối: Khách hàng đang có nợ xấu";
+
+        return "Thành công: Đủ điều kiện vay vốn!";
+      }
+
+      const mockUsers = [
+        {
+          isActive: false,
+          age: 25,
+          income: 15000000,
+          creditScore: 700,
+          hasBadDebt: false,
+        },
+        {
+          isActive: true,
+          age: 17,
+          income: 15000000,
+          creditScore: 700,
+          hasBadDebt: false,
+        },
+      ];
+      // In kết quả ra màn hình
+      const result = mockUsers.map(
+        (u, i) => `Test case ${i + 1}: ${verifyLoanEligibility(u)}`,
+      );
+      document.getElementById("output").innerHTML = result.join("<br>");
+    </script>
+  </body>
+</html>
